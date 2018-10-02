@@ -24,3 +24,41 @@ print(nums[::5])	#所有数每5个取一个数
 n2=nums[:]		#复制
 print((0,1,2,3,4,5)[:3]) #tuple也可以切片
 
+'''利用切片，去除字符串首位的空格'''
+def trim(s):
+	n=len(s)
+	str=s
+	i=0
+	j=-1
+	count=0
+	'''如果s的第i个为空格，
+	且i+1个不为空格则取第i+1项以后'''
+	while s[0]==' ' or s[-1]==' ':
+	# 如果全部为空格，则输出‘ ’	
+		if s[i]==' ':
+			count+=1
+		if count==len(s):
+			s=' '
+			break
+	# 去前面的空格
+		if s[i]==' ' and s[i+1]!=' ':
+			s=s[i+1:len(s)] 
+		i+=1
+	# 去后面的空格
+		if s[j]==' ' and s[j-1]!=' ':
+			s=s[0:len(s)+j]
+		j-=1
+	return s
+if trim('hello ')!='hello':
+	print(False,1)
+elif trim('  hello')!='hello':
+	print(False,2)
+elif trim('  hello  ')!='hello':
+	print(False,3)
+elif trim(' ')!=' ':
+	print(False,4)
+elif trim('    ')!=' ':
+	print(False,5)
+else:
+	print(True)
+
