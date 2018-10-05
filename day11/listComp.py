@@ -28,11 +28,11 @@ print(L)
 #练习  
 '''处理不同数据类型的lisComp,全部转化为小写'''
 L=['Hello','World',18,'Apple',None]
-L2=[for i in L if isstance]
+L2=[i.lower() for i in L if isinstance(i,str)] #if用来判断i是否为字符串，lower将字符串转换为小写
 	
 
 print(L2)
-if L2 ==['hello','world','Apple']：
+if L2 == ['hello','world','apple']:
 	print('通过')
 else:
 	print('成功')
