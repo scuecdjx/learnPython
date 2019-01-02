@@ -1,0 +1,12 @@
+#-*- coding:utf-8 -*-
+s=set([1,2,3])
+print(s)
+s.add(4)
+s.add(4)
+print(s)
+s.remove(4)
+print(s)
+s1=set([1,2])
+s2=set([5,6])
+print(s1&s2)
+print(s1|s2)
